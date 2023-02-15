@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: lightgray;
+}
+
+nav {
+    overflow: hidden;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+nav ul li {
+    float: left;
+    text-align: center;
+    font-size: 1rem;
+    margin-right: 1em;
+    list-style-type: none;
+}
+
+#info {
+    background: url(../img/1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 20vw;
+    min-height: fit-content;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 1em;
+}
+
+#info p {
+    font-size: 1.25rem;
+}  
