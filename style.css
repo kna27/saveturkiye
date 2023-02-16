@@ -8,7 +8,6 @@ body {
 nav {
     overflow: hidden;
     width: 100%;
-    position: sticky;
     top: 0;
     z-index: 1;
 
@@ -52,4 +51,21 @@ p {
 
 li {
     margin-left :1.5rem;
+}
+
+#logos {
+    max-width: 10%;
+    margin-left: 5rem;
+}
+#dec {
+    max-width: 20%
+
+}
+
+#cdp {
+    max-width: 30%
+}
+
+#donations {
+    size: 3rem;
 }
