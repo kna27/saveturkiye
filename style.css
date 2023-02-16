@@ -2,7 +2,7 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background-color: lightgray;
+    background-color: grey;
 }
 
 nav {
@@ -17,21 +17,39 @@ nav {
 nav ul li {
     float: left;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-right: 1em;
     list-style-type: none;
+    color: black;
 }
 
 #info {
-    background: url(../img/1.jpg) no-repeat center center fixed;
     background-size: cover;
     height: 20vw;
     min-height: fit-content;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: white;
+    background-color: grey;
+    color: black;
     padding: 1em;
 }
 
 #info p {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 }  
+
+#par1 {
+    margin-right: 30rem;
+}
+
+#map {
+    max-width: 30%;
+    float: right;
+    vertical-align: top;
+}
+
+p {
+    margin-left: 2.5rem;
+}
+
+li {
+    margin-left :1.5rem;
+}
