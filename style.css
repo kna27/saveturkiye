@@ -94,6 +94,9 @@ a:visited {
 .dark p {
     color: white;
     margin: 0.5em 0;
+}
+
+.dark[style*="background-image"] p:not(.emphasis) {
     filter: drop-shadow(.04em .04em var(--accent-1));
 }
 
@@ -105,7 +108,39 @@ a:visited {
     font-size: 0.85rem;
 }
 
+.organizations-info {
+    padding: 9em 0 1em 0;
+}
+
+.organizations {
+    width: 90%;
+    margin: 2em auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.organization {
+    width: 30em;
+    height: 10rem;
+    margin-bottom: 5em;
+    text-align: center;
+}
+
+.organization img {
+    width: 30%;
+}
+
 @media only screen and (max-width: 600px) {
+    nav {
+        position: relative;
+    }
+
+    nav ul li {
+        margin: 0 0.75em;
+        font-size: 1.2rem;
+    }
+    
     .img-content-split {
         flex-direction: column;
         align-items: center;
@@ -127,12 +162,12 @@ a:visited {
         text-align: center;
     }
 
-    nav {
-        position: relative;
+    .organizations-info {
+        padding: 1em 0;
     }
 
-    nav ul li {
-        margin: 0 0.75em;
-        font-size: 1.2rem;
+    .organizations {
+        width: 100%;
+        overflow: hidden;
     }
 }
