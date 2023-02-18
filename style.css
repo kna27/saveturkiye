@@ -56,6 +56,20 @@ a:visited {
     z-index: -1;
 }
 
+#scroll-down-overlay {
+    position: absolute;
+    height: 3em;
+    padding: 0 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    bottom: 0;
+    right: 20%;
+    margin: 2em 0;
+    text-transform: uppercase;
+    border: 0.2em solid var(--accent-1);
+}
+
 .img-content-split {
     display: flex;
     flex-direction: row;
@@ -96,7 +110,8 @@ a:visited {
     margin: 0.5em 0;
 }
 
-.dark[style*="background-image"] p:not(.emphasis) {
+.dark[style*="background-image"] p:not(.emphasis), .shadow {
+    color: white;
     filter: drop-shadow(.04em .04em var(--accent-1));
 }
 

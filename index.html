@@ -6,21 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/uoh4gav.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
     <title>Save Turkiye</title>
 </head>
 
 <body>
     <nav>
         <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="./donate/">Donate</a></li>
-            <li><a href="./volunteer/">Volunteer</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/donate/">Donate</a></li>
         </ul>
     </nav>
-    <img class="fullscreen" src="./img/home.png">
+    <img class="fullscreen" src="./img/home.png" alt="Man in front of ruble caused by earthquakes">
+    <div id="scroll-down-overlay">
+        <p class="shadow">Scroll Down</p>
+    </div>
     <div class="img-content-split">
-        <img src="./img/map.jpg">
+        <img src="/img/map.jpg" alt="Map of areas affected by earthquakes">
         <div class="text-content">
             <p class="emphasis">On February 6th 2023</p>
             <p>at 4:17 AM, the countries of Turkey and Syria were struck by a devastating magnitude 7.8 earthquake.
@@ -29,7 +31,7 @@
                 with hundreds of aftershocks. </p>
         </div>
     </div>
-    <div class="dark center" style="background-image: url('./img/home_deathtoll.png'); background-position: right;">
+    <div class="dark center" style="background-image: url('/img/home_deathtoll.png'); background-position: right;">
         <p>The confirmed death toll is</p>
         <p class="emphasis">41,000+</p>
         <p>yet this number will continue to rise as rubble is cleared and bodies are found.</p>
@@ -38,19 +40,28 @@
         <p>More than 25 million people have been affected by the earthquakes, including estimates of at least 7 million
             children.</p>
     </div>
-    <div class="dark center" style="background-image: url('./img/home_hopenotlost.jpg'); background-position: left;">
+    <div class="dark center" style="background-image: url('/img/home_hopenotlost.jpg'); background-position: left;">
         <p>However, not all hope is lost. Kerem Kinik, president of the Turkish Red Crescent, described the rescue and
             relief operations as a "marathon". He pointed out that relief operations in Turkey and Syria would continue
             for</p>
         <p class="emphasis">Another 18 Months.</p>
     </div>
     <div class="center">
-        <p>Help today by <a href="./donate/">donating</a> or <a href="./volunteer/">volunteering</a>.</p>
+        <p>Help today by <a href="./donate/">donating</a>.</p>
     </div>
     <div class="center small">
         <p>This website was created by Ferit Bayrakdar and Krish Arora to raise awareness for the situation affecting
             Turkey and Syria. Designed by Melissa Park.</p>
     </div>
+    <script>
+        window.addEventListener("resize", function () {
+            if (window.innerHeight * 1.75 > window.innerWidth) {
+                document.getElementById("scroll-down-overlay").style.display = "none";
+            } else {
+                document.getElementById("scroll-down-overlay").style.display = "flex";
+            }
+        });
+    </script>
 </body>
 
 </html>
