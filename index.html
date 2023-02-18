@@ -54,13 +54,15 @@
             Turkey and Syria. Designed by Melissa Park.</p>
     </div>
     <script>
-        window.addEventListener("resize", function () {
+        const changeOverlayVisibility = () => {
             if (window.innerHeight * 1.75 > window.innerWidth) {
                 document.getElementById("scroll-down-overlay").style.display = "none";
             } else {
                 document.getElementById("scroll-down-overlay").style.display = "flex";
             }
-        });
+        }
+        window.addEventListener("resize", changeOverlayVisibility);
+        changeOverlayVisibility();
     </script>
 </body>
 
