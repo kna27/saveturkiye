@@ -42,10 +42,13 @@ nav ul li {
 
 a {
     text-decoration: none;
-    color: var(--accent-1);
 }
 
-a:visited {
+a:not(li > a) {
+    font-weight: bold;
+}
+
+.accent, a, a:visited {
     color: var(--accent-1);
 }
 
@@ -56,13 +59,26 @@ a:visited {
     z-index: -1;
 }
 
-#scroll-down-overlay {
+.large-overlay {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    align-items: center;
+    width: 100%;
+    top: 15%;
+}
+
+.overlay {
     position: absolute;
-    height: 3em;
-    padding: 0 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+#scroll-down-overlay {
+    height: 3em;
+    padding: 0 1em;
     bottom: 0;
     right: 20%;
     margin: 2em 0;
@@ -112,7 +128,7 @@ a:visited {
 
 .dark[style*="background-image"] p:not(.emphasis), .shadow {
     color: white;
-    filter: drop-shadow(.04em .04em var(--accent-1));
+    filter: drop-shadow(.04em .04em black);
 }
 
 .center {
@@ -155,7 +171,7 @@ a:visited {
         margin: 0 0.75em;
         font-size: 1.2rem;
     }
-    
+
     .img-content-split {
         flex-direction: column;
         align-items: center;
@@ -175,6 +191,10 @@ a:visited {
 
     .text-content {
         text-align: center;
+    }
+
+    .text-content, .dark p, .center {
+        padding: 0 1em;
     }
 
     .organizations-info {

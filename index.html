@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Help us save Turkey and Syria">
+    <meta name="keywords" content="turkey, syria, earthquake, relief, help">
+    <link rel="icon" href="/img/favicon.png" type="image/png">
+    <meta property="og:title" content="Save Turkiye">
+    <meta property="og:description" content="Help us save Turkey and Syria">
+    <meta property="og:image" content="/img/map.png">
+    <meta property="og:url" content="https://saveturkiye.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Save Turkiye">
+    <meta property="og:locale" content="en_US">
     <link rel="stylesheet" href="https://use.typekit.net/uoh4gav.css">
     <link rel="stylesheet" href="/style.css">
     <title>Save Turkiye</title>
@@ -17,8 +27,9 @@
             <li><a href="/donate/">Donate</a></li>
         </ul>
     </nav>
+    <h1 class="overlay large-overlay">Help us save Turkey and Syria.</h1>
     <img class="fullscreen" src="./img/home.png" alt="Man in front of ruble caused by earthquakes">
-    <div id="scroll-down-overlay">
+    <div id="scroll-down-overlay" class="overlay">
         <p class="shadow">Scroll Down</p>
     </div>
     <div class="img-content-split">
@@ -28,7 +39,7 @@
             <p>at 4:17 AM, the countries of Turkey and Syria were struck by a devastating magnitude 7.8 earthquake.
                 About 9 hours later, an aftershock with a magnitude of 7.5 hit the same area. Throughout the next few
                 days, these two countries and their cities of Gaziantep, Hatay, Kahramanmaras, Aleppo, and etc, were hit
-                with hundreds of aftershocks. </p>
+                with hundreds of aftershocks.</p>
         </div>
     </div>
     <div class="dark center" style="background-image: url('/img/home_deathtoll.png'); background-position: right;">
@@ -56,9 +67,13 @@
     <script>
         const changeOverlayVisibility = () => {
             if (window.innerHeight * 1.75 > window.innerWidth) {
-                document.getElementById("scroll-down-overlay").style.display = "none";
+                document.querySelectorAll(".overlay").forEach((element) => {
+                    element.style.display = "none";
+                });
             } else {
-                document.getElementById("scroll-down-overlay").style.display = "flex";
+                document.querySelectorAll(".overlay").forEach((element) => {
+                    element.style.display = "flex";
+                });
             }
         }
         window.addEventListener("resize", changeOverlayVisibility);
